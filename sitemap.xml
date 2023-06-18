@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for site in site.data.sites %}
-        {% for s in site[1].s %}
+        {% for s in site.s %}
             <url>
                 <loc>{{ s }}.ysites.net</loc>
             </url>
