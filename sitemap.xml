@@ -1,15 +1,11 @@
----
-layout: null
----
-
 <urlset xmlns:xsi="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% for site_data in site.data.sites %}
-  {% for sitename in site_data[1].s %}
-    <url>
-      <loc>https://{{ sitename }}.ysites.net</loc>
-    </url>
-  {% endfor %}
-{% endfor %}
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for site in site.data.sites %}
+        {% for s in site[1].s %}
+            <url>
+                <loc>{{ s }}.ysites.net</loc>
+            </url>
+        {% endfor %}
+    {% endfor %}
 </urlset>
